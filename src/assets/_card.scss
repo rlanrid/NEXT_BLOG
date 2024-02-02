@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;600;700;800;900&display=swap');
+
+.today__inner {
+    height: 500px;
+    background: #ddd;
+    margin-bottom: 70px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.604);
+    }
+
+    .today {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        // background-image: url('https://images.unsplash.com/photo-1705838589878-07f4d7ec5ea4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTN8fHxlbnwwfHx8fHw%3D');
+        // background-repeat: no-repeat;
+        // background-size: auto;
+        // background-position: center;
+
+        a {
+            height: 100%;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+
+        .text {
+            position: absolute;
+            z-index: 999;
+            left: 0;
+            bottom: 0;
+            padding: 5vw;
+            color: var(--white);
+
+            .title {
+                font-size: 4rem;
+                margin-bottom: 5px;
+                text-align: left;
+            }
+
+            .content {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+
+.list__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    width: 80%;
+    margin: 0 auto;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 680px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+        .thumb {
+            margin-bottom: 15px;
+
+            a {
+                display: inline-block;
+                height: 100%;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+
+        }
+
+        .content {
+            font-family: 'NanumSquareNeo';
+
+            >div {
+                margin-bottom: 13px;
+            }
+
+            .title {
+                font-size: 1.7rem;
+                font-weight: 900;
+            }
+
+            .date {
+                font-size: 16px;
+                color: var(--black200);
+                font-weight: 400;
+            }
+
+            .desc {
+                font-size: 14px;
+                color: var(--black100);
+                font-weight: 300;
+            }
+        }
+    }
+}

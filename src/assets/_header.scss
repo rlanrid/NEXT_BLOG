@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
+
+.header__wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--white);
+    color: var(--black);
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        font-family: 'Kaisei Decol', serif;
+        position: relative;
+
+        .logo {
+            width: 100%;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.header__nav {
+    >ul {
+        text-align: center;
+
+        >li {
+            display: inline-block;
+
+            >a {
+                margin: 0 30px;
+            }
+        }
+    }
+}
+
+.header__mobile {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+
+    span {
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        background-color: var(--black);
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            top: 7px;
+            left: 0;
+            background-color: var(--black);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            bottom: 7px;
+            left: 0;
+            background-color: var(--black);
+        }
+    }
+}
+
+
+@media(max-width: 780px) {
+    .header__mobile {
+        display: block;
+    }
+
+    .header__nav {
+        display: none;
+
+        &.show {
+            display: block;
+
+            >ul {
+                position: absolute;
+                width: 100px;
+                right: 0;
+                top: 50px;
+                text-align: right;
+                display: flex;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+
+                >li {
+                    width: 100%;
+
+                    >a {
+                        margin: 0;
+                    }
+
+                    span {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
